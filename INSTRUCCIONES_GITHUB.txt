@@ -1,0 +1,79 @@
+╔═══════════════════════════════════════════════════════════╗
+║  INSTRUCCIONES PARA DESCARGAR EL PROYECTO OSINT-UI       ║
+║  Usuario: Ciberpro                                        ║
+║  Repo: https://github.com/Ciberpro/osint-ui-clone       ║
+╚═══════════════════════════════════════════════════════════╝
+
+📌 OPCIÓN 1: USAR BOTÓN "SAVE TO GITHUB" EN EMERGENT
+═══════════════════════════════════════════════════════════
+
+1. En la interfaz de Emergent, busca el botón "Save to GitHub"
+2. Selecciona tu repositorio: Ciberpro/osint-ui-clone
+3. Selecciona rama: main
+4. Click en "PUSH TO GITHUB"
+5. ✅ El código se subirá automáticamente
+
+Luego en tu PC Windows:
+   a) Abre PowerShell
+   b) cd C:\Users\TuUsuario\Desktop
+   c) git clone https://github.com/Ciberpro/osint-ui-clone.git
+   d) cd osint-ui-clone
+
+
+📌 OPCIÓN 2: DESCARGAR DIRECTAMENTE DESDE GITHUB (SIN PUSH)
+═══════════════════════════════════════════════════════════
+
+Si el botón no funciona, descarga manualmente:
+
+1. Ve a: https://github.com/Ciberpro/osint-ui-clone
+2. Click en el botón verde "Code"
+3. Click en "Download ZIP"
+4. Guarda en tu PC
+5. Descomprime el archivo
+
+
+📌 OPCIÓN 3: SI EL REPO ESTÁ VACÍO - CREAR ARCHIVOS MANUALMENTE
+═══════════════════════════════════════════════════════════
+
+Te daré todo el código para que lo copies manualmente.
+
+
+═══════════════════════════════════════════════════════════
+SIGUIENTE PASO DESPUÉS DE DESCARGAR
+═══════════════════════════════════════════════════════════
+
+1. ✅ Instalar Python 3.11+
+   https://www.python.org/downloads/
+
+2. ✅ Instalar MongoDB
+   https://www.mongodb.com/try/download/community
+
+3. ✅ Editar archivos .env (IMPORTANTE):
+
+   backend/.env:
+   ────────────
+   MONGO_URL="mongodb://localhost:27017"
+   DB_NAME="osint_database"
+   CORS_ORIGINS="*"
+   
+   HUNTER_API_KEY="1c7eac792ebe9676b9e81b201bed4611afc4876c"
+   NUMVERIFY_API_KEY="6a26f90a6f339d66b599b016498ebe87"
+   VIRUSTOTAL_API_KEY="d0edf4c2fa7451945dce640a646f926ea57ef1c62d554db52c358e90261593e5"
+
+   frontend/.env:
+   ──────────────
+   REACT_APP_BACKEND_URL=http://localhost:8001
+
+4. ✅ Terminal 1 - Backend:
+   cd backend
+   pip install -r requirements.txt
+   python -m uvicorn server:app --host 0.0.0.0 --port 8001 --reload
+
+5. ✅ Terminal 2 - Frontend:
+   cd frontend
+   yarn install
+   yarn start
+
+6. ✅ Abre: http://localhost:3000
+
+🎉 ¡LISTO! Tu aplicación OSINT funcionará en tu PC
