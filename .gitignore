@@ -14,3 +14,7 @@ dist/
 
 # Env files (keep for now but user should change keys)
 # .env
+-e 
+# Environment files
+*.env
+*.env.*
