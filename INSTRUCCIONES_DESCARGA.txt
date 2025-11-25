@@ -1,0 +1,65 @@
+=====================================
+CÓMO DESCARGAR EL PROYECTO OSINT-UI
+=====================================
+
+OPCIÓN 1: DESCARGAR DESDE EMERGENT (MÁS FÁCIL)
+-----------------------------------------------
+
+1. En la interfaz de Emergent, busca el botón "Files" o "Explorer" 📁
+2. Navega a la carpeta: /app
+3. Busca el archivo: osint-ui-project.zip (254 KB)
+4. Click derecho → Download
+5. Guárdalo en tu PC (ejemplo: Desktop)
+6. Descomprime el archivo ZIP
+
+
+OPCIÓN 2: USAR GITHUB
+----------------------
+
+El proyecto está en: https://github.com/[TU-USUARIO]/[TU-REPO]
+
+Ejecuta en tu PC (Windows PowerShell):
+   git clone https://github.com/[TU-USUARIO]/[TU-REPO].git
+
+
+CONTENIDO DEL PROYECTO
+-----------------------
+
+osint-ui-project/
+├── backend/
+│   ├── server.py (API con 8 herramientas OSINT)
+│   ├── requirements.txt (dependencias Python)
+│   └── .env (API keys configuradas)
+├── frontend/
+│   ├── src/
+│   │   ├── App.js (aplicación React completa)
+│   │   ├── App.css (estilos)
+│   │   └── components/ (componentes UI)
+│   ├── package.json (dependencias Node)
+│   └── .env (configuración backend URL)
+└── OSINT_UI_README.md (documentación completa)
+
+
+SIGUIENTE PASO DESPUÉS DE DESCARGAR
+------------------------------------
+
+1. Descomprime el ZIP en tu PC
+2. Instala Python 3.11+
+3. Instala MongoDB
+4. Abre 2 terminales:
+   
+   Terminal 1 (Backend):
+   cd backend
+   pip install -r requirements.txt
+   python -m uvicorn server:app --host 0.0.0.0 --port 8001 --reload
+   
+   Terminal 2 (Frontend):
+   cd frontend
+   yarn install
+   yarn start
+
+5. Abre: http://localhost:3000
+
+¡LISTO! 🚀
+
+=====================================
